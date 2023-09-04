@@ -79,16 +79,67 @@
         }
     }
 }
-aside{
+.aside{
     width: 1180px;
     height: 400px;
     margin: 0 auto;
     overflow: hidden;
+    position: relative;
+    top: -400px;
+    left: -1500px;
     opacity: 0;
-    display: none;
+    transition: 0.5s;
     .inner{
         width: 100%;
         height: 100%;
         background-color: #333;
+        .meal{
+            float: left;
+            width: 300px;
+            height: 350px;
+            object-fit: cover;
+            margin: 20px;
+            border-radius: 12px;
+            opacity: 0.8;
+        }
+        div{
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font: bold 32px/1 "Noto Serif KR";
+                color: #fff;
+                padding: 50px;
+            }
+            p{
+                font: bold 16px/1.7 "Noto Serif KR";
+                color: #fff;
+            }
+        }
+        .meal2{
+            position: relative;
+            top: -350px;
+            float: right;
+            width: 300px;
+            height: 350px;
+            object-fit: cover;
+            margin: 20px;
+            border-radius: 12px;
+            opacity: 0.8;
+        }
+        i{
+            position: relative;
+            color: #fff;
+            top: -320px;
+            right: -480px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    &.on{
+        left: 0;
+        opacity: 1;
     }
 }

@@ -69,7 +69,7 @@ header .inner .menuWeb .util li a {
   height: 500px;
   overflow: hidden;
   position: relative;
-  margin: 500px auto 250px;
+  margin: 400px auto 250px;
 }
 #slider .title {
   position: relative;
@@ -231,18 +231,69 @@ header .inner .menuWeb .util li a {
   background-color: #333;
 }
 
-aside {
+.aside {
   width: 1180px;
   height: 400px;
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
+  top: -400px;
+  left: -1500px;
   opacity: 0;
-  display: none;
+  transition: 0.5s;
 }
-aside .inner {
+.aside .inner {
   width: 100%;
   height: 100%;
   background-color: #333;
+}
+.aside .inner .meal {
+  float: left;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  margin: 20px;
+  border-radius: 12px;
+  opacity: 0.8;
+}
+.aside .inner div {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.aside .inner div h2 {
+  font: bold 32px/1 "Noto Serif KR";
+  color: #fff;
+  padding: 50px;
+}
+.aside .inner div p {
+  font: bold 16px/1.7 "Noto Serif KR";
+  color: #fff;
+}
+.aside .inner .meal2 {
+  position: relative;
+  top: -350px;
+  float: right;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  margin: 20px;
+  border-radius: 12px;
+  opacity: 0.8;
+}
+.aside .inner i {
+  position: relative;
+  color: #fff;
+  top: -320px;
+  right: -480px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.aside.on {
+  left: 0;
+  opacity: 1;
 }
 
 footer {
@@ -471,7 +522,8 @@ figure .inner a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 200px auto;
+  margin: 0 auto 100px;
+  top: -200px;
 }
 #tapmenu .title1 {
   position: relative;
@@ -589,6 +641,11 @@ figure .inner a:hover {
   font: bold 80px/1 "arial";
   color: brown;
   top: 80px;
+}
+#tapmenu h1 {
+  position: absolute;
+  bottom: -170px;
+  font: bold 100px/1 "arial";
 }
 
 #kimchi {
@@ -714,11 +771,14 @@ figure .inner a:hover {
 #process .inner4 article {
   float: left;
   width: 380px;
-  margin-left: 6px;
+  margin-right: 20px;
+}
+#process .inner4 article:last-child {
+  margin-right: 0px;
 }
 #process .inner4 article h2 {
   font: bold 30px/1 "Noto Serif KR";
-  color: #999;
+  color: #888;
   margin-bottom: 30px;
   text-align: center;
 }
@@ -741,9 +801,62 @@ figure .inner a:hover {
   transform: scale(1.2);
 }
 #process .inner4 article p {
+  margin-top: 20px;
   width: 90%;
   font: bold 16px/1.4 "Noto Serif KR";
   color: #555;
+}
+
+.links {
+  position: relative;
+  width: 1180px;
+  height: 400px;
+  margin: 10px auto 100px;
+}
+.links i {
+  font-size: 100px;
+  color: #888;
+  position: relative;
+  left: 530px;
+  margin-bottom: 50px;
+}
+.links .wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  float: left;
+}
+.links .wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.links .wrap article {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-left: 60px;
+  border: 3px solid orange;
+  transform: scale(1);
+  overflow: hidden;
+  filter: brightness(80%);
+}
+.links .wrap article a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: 0.5s;
+}
+.links .wrap article a img:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+.links .wrap article:nth-of-type(1) {
+  margin-left: 0px;
 }
 
 body {

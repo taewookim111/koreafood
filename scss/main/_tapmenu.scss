@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    margin: 200px auto;
+    margin: 0 auto 100px;
+    top: -200px;
     .title1{
         position: relative;
         font: bold 80px/1 "arial";
@@ -126,6 +127,11 @@
         font: bold 80px/1 "arial";
         color: brown;
         top: 80px;
+    }
+    h1{
+        position: absolute;
+        bottom: -170px;
+        font: bold 100px/1 "arial";
     }
 }
 
